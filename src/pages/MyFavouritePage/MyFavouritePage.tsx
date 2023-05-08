@@ -9,6 +9,7 @@ import { CloseIcon } from '../../components/Icon/Icon';
 import image from '../../assets/img/img';
 import config from '../../config';
 import "./MyFavouritePage.module.scss";
+import Button from '../../components/Button/Button';
 export interface MyFavouritePageProps {
 }
 
@@ -76,9 +77,13 @@ export default function MyFavouritePage (props: MyFavouritePageProps) {
 
                 <div
                   onClick={() => handleDelete(item)}
-                  className="cursor-pointer  items-center px-2 py-1 top-2 mt-2 rounded-2xl bg-[#5985FF] text-[white] delete-btn"
+                  className="cursor-pointer delete-btn w-[150px] mt-3"
                 >
-                  <CloseIcon className={"h-4 w-4 "} />
+                  <span className="border-[1px] mr-[10px] flex items-center justify-center border-solid
+                   border-white text-[#b5b5b5] rounded-3xl  py-2 cursor-pointer hover:bg-[#007ACC] hover:text-white" >
+                      XÓA
+                  </span>
+                  {/* <CloseIcon className={"h-4 w-4 "} /> */}
                 </div>
               </div>
             );
