@@ -1,0 +1,10 @@
+img {
+    
+    .delete-btn {
+        display: none !important;
+    }
+    &:hover .delete-btn {
+        display: block !important;
+    }
+}
+  
