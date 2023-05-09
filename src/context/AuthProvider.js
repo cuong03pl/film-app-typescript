@@ -8,7 +8,7 @@ export const UserContext = createContext();
 
 function AuthProvider({ children }) {
   const navigate = useNavigate();
-  const [info, setInfo] = useState();
+  const [info, setInfo] = useState({});
   const location = useLocation();
 
   useEffect(() => {

@@ -13,8 +13,8 @@ export interface PersonPageProps {
 export default function PersonPage (props: PersonPageProps) {
   const { id } = useParams<{id?: string}>();
   const [person, setPerson] = React.useState<Record<string, any>>({});
-  const [moviesParticipated, setMoviesParticipated] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [moviesParticipated, setMoviesParticipated] = useState<[]>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
     setIsLoading(true);

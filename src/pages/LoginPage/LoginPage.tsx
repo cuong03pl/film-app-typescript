@@ -8,7 +8,7 @@ interface LoginPageProps {
 }
 
 export default function LoginPage (props: LoginPageProps) {
-  const [login, setLogin] = useState(true);
+  const [login, setLogin] = useState<boolean>(true);
   useEffect(() => {
     document.title = "Đăng nhập";
   });

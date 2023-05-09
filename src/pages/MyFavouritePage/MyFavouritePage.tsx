@@ -5,17 +5,15 @@ import { doc, getDoc, setDoc } from 'firebase/firestore';
 import { db } from '../../firebase/config';
 import Spinner from '../../components/Spinner/Spinner';
 import Images from '../../components/Images/Images';
-import { CloseIcon } from '../../components/Icon/Icon';
 import image from '../../assets/img/img';
 import config from '../../config';
 import "./MyFavouritePage.module.scss";
-import Button from '../../components/Button/Button';
 export interface MyFavouritePageProps {
 }
 
 export default function MyFavouritePage (props: MyFavouritePageProps) {
   const { id } = useParams();
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   const user = useContext(UserContext);
   const [favourite, setFavourite] = useState([]);

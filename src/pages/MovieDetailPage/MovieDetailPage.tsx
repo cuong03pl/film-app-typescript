@@ -22,12 +22,12 @@ interface RouteParams {
 }
 export default function MovieDetailPage (props: MovieDetailPageProps) {
   const user = useContext(UserContext);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
   const { id }= useParams<{id?: string}>();
   const [data, setData] = useState<Record<string, any>>({});
   const [favourite, setFavourite] = useState<Array<Record<string, any>>>([]);
-  const [check, setCheck] = useState(false);
-  const [selected, setSelected] = useState(false);
+  const [check, setCheck] = useState<boolean>(false);
+  const [selected, setSelected] = useState<boolean>(false);
   useEffect(() => {
     if (data.title) {
       document.title = `${data.title}`;

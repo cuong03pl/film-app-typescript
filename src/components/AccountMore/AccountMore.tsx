@@ -9,17 +9,12 @@ interface AccountMore {
     data: any
 }
 function AccountMore({ data }: AccountMore) {
-  const [login, setLogin] = useState(false);
-  console.log(data);
-  
+  const [login, setLogin] = useState<boolean>(false);
+
   useEffect(() => {
     if (data) {
-      console.log(123);
-      
       setLogin(true);
     }
-    console.log(345);
-    
   }, [data]);
 
   return (

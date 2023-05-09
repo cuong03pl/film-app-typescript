@@ -9,8 +9,8 @@ import SkeletonItem from "../Skeleton/Skeleton";
 import { getMovieRightBar } from "../../apiServices/apiServices";
 
 function Banner() {
-  const [bannerList, setBannerList] = useState([]);
-  const [isloading, setIsLoading] = useState(true);
+  const [bannerList, setBannerList] = useState<[]>([]);
+  const [isloading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
     setIsLoading(true);
@@ -24,9 +24,6 @@ function Banner() {
           console.log(error);
         });
     };
-    // setTimeout(() => {
-    //   setIsLoading(false);
-    // }, 1000);
     fetchApi();
   }, []);
 

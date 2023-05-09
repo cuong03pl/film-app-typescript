@@ -8,10 +8,10 @@ export interface GenresPageProps {
 }
 
 export default function GenresPage (props: GenresPageProps) {
-  const [movies, setMovies] = React.useState([]);
+  const [movies, setMovies] = useState<[]>([]);
   const { id }: any = useParams();
   const { name } = useParams();
-  const [pages, setPages] = useState(1);
+  const [pages, setPages] = useState<number>(1);
   const [page, setPage] = useState<number>(1);
   React.useEffect(() => {
     const fetchApi = async () => {

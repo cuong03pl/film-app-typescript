@@ -7,8 +7,8 @@ interface TrailerProps {
   id?: string
 }
 function Trailer({ id = ""}: TrailerProps) {
-  const [trailer, setTrailer] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [trailer, setTrailer] = useState<[]>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
     setIsLoading(true);

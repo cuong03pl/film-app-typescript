@@ -3,14 +3,15 @@ import { useParams } from 'react-router-dom';
 import { search } from '../../apiServices/apiServices';
 import SearchResult from '../../components/SearchResult/SearchResult';
 import Paginate from '../../components/Paginate/Paginate';
+import Spinner from '../../components/Spinner/Spinner';
 
 export interface SearchPageProps {
 }
 
 export default function SearchPage (props: SearchPageProps) {
-  const [movies, setMovies] = useState([]);
+  const [movies, setMovies] = useState<[]>([]);
   const { q } = useParams<{q?: string}>();
-  const [pages, setPages] = useState(1);
+  const [pages, setPages] = useState<number>(1);
   const [page, setPage] = useState<number>();
 
   useEffect(() => {
@@ -52,8 +53,7 @@ export default function SearchPage (props: SearchPageProps) {
       <h3 className="text-xl font-semibold mt-3 text-textPrimary">
         Kết quả của "{q}"
       </h3>
-
-      <div className="flex flex-wrap  w-full mt-6 ">{renderMovies()}</div>
+      
       <Paginate pageCount={pages} handlePageClick={handlePageClick} />
     </div>
   );

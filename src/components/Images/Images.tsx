@@ -1,4 +1,4 @@
-import { ElementType, ReactElement, ReactNode, useState } from "react";
+import { ElementType,  useState } from "react";
 
 interface ImagesProps {
   className?: string, src: string, alt?: string, fallBack: any
@@ -6,7 +6,7 @@ interface ImagesProps {
 function Images({ className, src, alt, fallBack }: ImagesProps) {
   let Comp: ElementType = "img";
   
-  const [srcImg, setSrcImg] = useState("");
+  const [srcImg, setSrcImg] = useState<string>("");
   const handleError = () => {
     setSrcImg(fallBack);
   };

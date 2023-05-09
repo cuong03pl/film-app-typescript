@@ -10,8 +10,8 @@ interface CastProps {
   id?: string
 }
 function Cast({ id }: CastProps) {
-  const [cast, setCast] = useState<[] >([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [cast, setCast] = useState<[]>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
     setIsLoading(true);
@@ -26,10 +26,6 @@ function Cast({ id }: CastProps) {
         });
     };
     fetchApi();
-    // setTimeout(() => {
-    //   setIsLoading(false);
-    // }, 5000);
-    // return () => {};
   }, [id]);
   return (
     <div className="mt-10">
@@ -40,7 +36,6 @@ function Cast({ id }: CastProps) {
         spaceBetween={10}
         slidesPerGroupAuto
         loop={true}
-        // loopedSlides={10}
         className=" !max-w-[845px]"
       >
         {cast

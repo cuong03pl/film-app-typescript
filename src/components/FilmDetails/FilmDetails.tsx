@@ -24,7 +24,7 @@ function FilmDetails({
   check,
 }: FilmDetailsProps) {
   const [movie, setMovie] = useState<Record<string, any>>({});
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   const user = useContext(UserContext);
   useEffect(() => {

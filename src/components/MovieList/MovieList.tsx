@@ -19,7 +19,7 @@ interface MovieListProps {
 
 function MovieList({ path, title }: MovieListProps) {
   const [movieList, setMovieList] = useState<any>([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
     setIsLoading(true);

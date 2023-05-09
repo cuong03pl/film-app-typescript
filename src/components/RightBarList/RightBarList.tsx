@@ -7,8 +7,8 @@ interface RightBarListProps {
   title: string
 }
 function RightBarList({ path, title }: RightBarListProps) {
-  const [favorite, setFavorite] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [favorite, setFavorite] = useState<[]>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
   useEffect(() => {
     setIsLoading(true);
     const fetchApi = async () => {

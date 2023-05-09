@@ -9,7 +9,7 @@ export interface ProfilePageProps {
 
 export default function ProfilePage (props: ProfilePageProps) {
   const user = React.useContext(UserContext);
-  console.log(user);
+
   return (
     <div className="flex items-center w-full">
       <div className="w-[50%] flex justify-center">
